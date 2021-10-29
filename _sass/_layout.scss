@@ -1,0 +1,20 @@
+#page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.site-content {
+  flex-grow: 1;
+}
+
+.page-content, .wrapper {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+section {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}

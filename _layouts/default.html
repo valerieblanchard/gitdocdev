@@ -21,14 +21,18 @@
 			<div class="wrapper">
 				<div class="site-branding">
 					<a class="logo" href="/"><img src="{{ '/assets/images/logo-documentation.png' | relative_url }}" alt="vblank doc logo" width="60"></a>
-					<span class="site-title">{{ page.title }}</span>
+					<span class="site-title">Gitdocdev</span>
 				</div>
 				{% include navigation.html %}
 			</div>
 		</header>
 
 		<div class="site-content">
-			{{ content }}
+			<main id="main" class="content-area" role="main">
+				<div class="page-content">
+					{{ content }}
+				</div>
+			</main>
 		</div>
 
 		{% include footer.html %}

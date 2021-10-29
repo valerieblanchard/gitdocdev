@@ -1,0 +1,33 @@
+---
+layout: default
+title: Git Doc Dev
+---
+
+<section class="baseline">
+		<h1>Hi there <span class="big">:wave:</span>, I'm Valérie!</h1>
+		<p>This Jekyll site is under development and will bring my selected resources for web development together to always have access to snippets that have been or are still useful to me on a daily basis!</p>
+</section>
+
+<section class="category-list">
+	<h2>Select a topic</h2>
+	<div class="flex-grid">
+
+		{% for cat in site.categories %}
+			{% assign cat_name = cat[0] %}
+			<div class="category-vignette {{ cat_name }}">
+				<h3><a href="/{{ cat_name }}/">{{ cat_name }}</a></h3>
+				{% assign num_posts = site.categories[cat_name] | size %}
+					{% if num_posts > 1 %}
+						<p>{{ site.categories[cat_name] | size }} posts</p>
+					{% else %}
+						<p>{{ site.categories[cat_name] | size }} post</p>
+					{% endif %}
+				{% for post in cat[1] %}
+					<!-- <p><a href="{{ post.url }}">{{ post.title }}</a></p> -->
+				{% endfor %}
+			</div>
+		{% endfor %}
+
+		
+	</div>
+</section>

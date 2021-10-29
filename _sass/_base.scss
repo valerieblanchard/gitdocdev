@@ -1,11 +1,4 @@
-/*-------------------
-  Box Model
----------------------*/
-/**
- * Set up a decent box model on the root element
- * @link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
- * 1. Inherit box-sizing to make it easier to change the property for components that leverage other behavior
- */
+/* Box Model */
  html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -13,7 +6,7 @@
 
 *,
 *:before,
-*:after { /* 1 */
+*:after {
   -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
@@ -22,15 +15,109 @@ body {
   font-family: "Helvetica", "Arial", "Sans-Serif";
   font-size: 16px;
 }
-#page {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-.site-content {
-  flex-grow: 1;
+
+/* Met en évidence les abréviations (ayant un attribut title) */
+abbr[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
 }
 
+/* Met en évidence les citations */
+blockquote {
+  margin: .75em 0 .75em 20px;
+  padding: 0 0 0 10px;
+  border-left: solid 2px #ddd;
+}
+q, cite {
+  font-style: italic;
+}
+q cite, q q {
+  font-style: normal
+}
 
+figure {
+  margin: 0;
+}
 
+/* Supprime les guillemets automatiques (citations courtes) */
+// q {
+//   quotes: none;
+// }
+// q:before, q:after {
+//   content: ""; /* Nécessaire pour Safari/Chrome */
+// }
+
+/* Styles de base pour les listes de définition */
+dl {
+  margin: .75em 0;
+}
+dt {
+  margin: .75em 0 0 0;
+  font-weight: bold;
+}
+dd {
+  margin: .25em 0 .25em 32px;
+}
+
+kbd {
+	margin: 0px 0.1em;
+	padding: 0.1em 0.6em;
+	border-radius: 3px;
+	border: 1px solid rgb(204, 204, 204);
+	color: rgb(51, 51, 51);
+	line-height: 1.4;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 10px;
+	display: inline-block;
+	box-shadow: 0px 1px 0px rgba(0,0,0,0.2), inset 0px 0px 0px 2px #ffffff;
+	background-color: rgb(247, 247, 247);
+	text-shadow: 0 1px 0 #fff;
+}
+
+pre {
+  overflow-x: auto;
+  font-size: 14px;
+}
+
+/* Mise en forme simple pour les tableaux */
+table {
+  margin: 0;
+  border: 1px solid gray;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table td, table th {
+  padding: 4px;
+  border: 1px solid #ccc;
+  vertical-align: top;
+}
+
+/* Conteneurs sémantiques de HTML 5 */
+article, aside, dialog, figure, footer, header,
+hgroup, menu, nav, section {
+  display: block;
+}
+
+hr {
+  height: 3px;
+  color: gray;
+  background-color: gray;
+  margin: 60px 0;
+  border: 0;
+}
+
+ins {
+  background: #fff9c0;
+  text-decoration: none;
+}
+
+big {
+  font-size: 125%;
+}
+
+a {
+  color: $color_link;
+  &:visited {
+    color: darken($color_link, 20%);
+  }
+}

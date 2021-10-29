@@ -1,0 +1,106 @@
+/** WIDTH SITE auto responsive **/
+$large-desktop-width: 1280px; //80em;
+$desktop-width: 960px; // 60em;
+$tablet-width:  580px; // 36.250em;
+$phone-width: 90%;
+  
+@mixin width-site {
+  max-width: $phone-width;
+
+  @include large-desktop {
+    max-width: $large-desktop-width;
+  }
+
+  @include desktop {
+    min-width: $desktop-width;
+  }
+
+  @include tablet {
+    min-width: $tablet-width;
+  }
+}
+  
+/** RESPONSIVE BREAKPOINTS **/
+
+
+// global //
+@mixin large-desktop {
+  @media (min-width: #{$large-desktop-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width + 20}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width + 20}) {
+    @content;
+  }
+}
+
+// only //
+@mixin large-desktop-only {
+  @media (min-width: #{$large-desktop-width}) {
+    @content;
+  }
+}
+
+@mixin desktop-only {
+  @media (min-width: #{$desktop-width + 20}) and (max-width: #{$large-desktop-width - 1}) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media (min-width: #{$tablet-width + 20}) and (max-width: #{$desktop-width + 19}) {
+    @content;
+  }
+}
+
+@mixin phone-only {
+  @media (max-width: #{$tablet-width + 19}) {
+    @content;
+  }
+}
+// max //
+@mixin desktop-max {
+  @media (max-width: #{$large-desktop-width - 1}) {
+    @content;
+  }
+}
+
+@mixin tablet-max {
+  @media (max-width: #{$desktop-width + 19}) {
+    @content;
+  }
+}
+
+@mixin phone-max {
+  @media (max-width: #{$tablet-width + 19}) {
+    @content;
+  }
+}
+
+
+// custom //
+@mixin responsive($width) {
+  @media (min-width: #{$width}) {
+    @content;
+  }
+}
+
+/** RETINA **/
+
+@mixin retina {
+  @media (min--moz-device-pixel-ratio: 1.3),
+  (-o-min-device-pixel-ratio: 2.6/2),
+  (-webkit-min-device-pixel-ratio: 1.3),
+  (min-device-pixel-ratio: 1.3),
+  (min-resolution: 1.3dppx) {
+    @content;
+  }
+}

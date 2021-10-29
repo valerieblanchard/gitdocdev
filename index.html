@@ -15,7 +15,7 @@ title: Git Doc Dev
 		{% for cat in site.categories %}
 			{% assign cat_name = cat[0] %}
 			<div class="category-vignette {{ cat_name }}">
-				<h3><a href="{{ baseurl }}/{{ cat_name }}/">{{ cat_name }}</a></h3>
+				<h3><a href="{{ site.baseurl }}/{{ cat_name }}/">{{ cat_name }}</a></h3>
 				{% assign num_posts = site.categories[cat_name] | size %}
 					{% if num_posts > 1 %}
 						<p>{{ site.categories[cat_name] | size }} posts</p>

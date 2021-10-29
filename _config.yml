@@ -1,0 +1,29 @@
+# site settings
+title: gitdocdev
+description: "Snippets, blabla and other piece of code"
+keywords: "github, github-pages, websites, static gen, hosting, html, documentation, gh-pages"
+
+# author settings for cc-by
+author: valerie blanchard
+pub_year: 2021
+github_username: valerieblanchard
+avatar: https://avatars.githubusercontent.com/u/20461328
+
+# add the full url for the github repository
+repo: "https://github.com/valerieblanchard/gitdocdev"
+
+# urls
+# your gh-pages url: https://username.github.io
+# url: https://valerieblanchard.github.io
+# your repository name: /repository
+# baseurl: /gitdocdev
+
+# Build settings
+markdown: kramdown
+permalink: /:categories/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jemoji

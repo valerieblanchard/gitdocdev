@@ -14,9 +14,9 @@ repo: "https://github.com/valerieblanchard/gitdocdev"
 
 # urls
 # your gh-pages url: https://username.github.io
-# url: https://valerieblanchard.github.io
+url: https://valerieblanchard.github.io
 # your repository name: /repository
-# baseurl: /gitdocdev
+baseurl: /gitdocdev
 
 # Build settings
 markdown: kramdown

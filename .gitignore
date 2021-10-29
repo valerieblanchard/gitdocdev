@@ -11,4 +11,5 @@ vendor/
 Gemfile
 Gemfile.lock
 
+# Ignore config for local development
 _config-dev.yml

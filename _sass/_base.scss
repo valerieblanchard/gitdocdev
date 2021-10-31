@@ -121,3 +121,11 @@ a {
     color: darken($color_link, 20%);
   }
 }
+
+#breadcrumbs {
+  padding: 10px 0;
+  a {
+    text-decoration: none;
+    color: $color_secondary;
+  }
+}

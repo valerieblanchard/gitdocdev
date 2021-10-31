@@ -1,0 +1,12 @@
+<div class="breadcrumb" id="breadcrumbs">
+  <a href="{{ site.baseurl | append: '/' }}">Home</a> »
+
+  {% for category in page.categories %}
+    {% assign crumb = site.data.breadcrumbs[category] %}
+    {% if crumb %}
+      <a href="{{ crumb.url | prepend: site.baseurl }}">{{ crumb.title }}</a> »
+    {% endif %}
+  {% endfor %}
+
+  <span class="breadcrumb-last" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</span>
+</div>

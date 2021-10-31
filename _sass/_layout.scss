@@ -18,3 +18,36 @@ section {
   padding-top: 25px;
   padding-bottom: 25px;
 }
+
+// flex-grid
+.vignette-single {
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  transition: all .25s ease-in-out .07s;
+  &:hover, &:focus {
+    background-color: lighten($color_primary, 30%);
+  }
+}
+
+/* Two images per row */
+@include tablet {
+	.flex-grid {
+		display: flex;
+		flex-flow: row wrap;
+		margin-left: -20px; /* removes margin-left item on the left */
+	}
+	.flex-grid > * {
+		overflow: hidden; /* Prevent enlarge container with p overlay left or right outside flex-item */
+		margin-left: 20px; /* used like gutter */
+		margin-bottom: 20px; /* used like gutter */
+		width: calc(50% - 20px);
+	}
+}
+/* Three images per row */
+@include desktop {
+	.flex-grid > * {
+		width: calc(33.33% - 20px);
+	}
+}

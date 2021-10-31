@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="HandheldFriendly" content="true" />
-	<title>{{ page.title }}</title>
+	<title>{{ page.title | escape }} | {{ site.title | escape }}</title>
 	<link rel="shortcut icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
 	<link rel="stylesheet" type="text/css" href="{{ '/assets/css/style.css' | relative_url }}">
@@ -20,8 +20,7 @@
 		<header class="site-header" id="header" role="banner">
 			<div class="wrapper">
 				<div class="site-branding">
-					<a class="logo" href="/"><img src="{{ '/assets/images/logo-documentation.png' | relative_url }}" alt="vblank doc logo" width="60"></a>
-					<span class="site-title">Gitdocdev</span>
+					<a class="logo" href="{{ site.baseurl }}/"><img class="logo" src="{{ '/assets/images/logo-documentation.png' | relative_url }}" alt="vblank doc logo" width="60"><span class="site-title">Gitdocdev</span></a>
 				</div>
 				{% include navigation.html %}
 			</div>
@@ -37,6 +36,7 @@
 
 		{% include footer.html %}
 	</div>
+	<script src="{{ site.baseurl }}/assets/js/navigation.js"></script>
 </body>
 
 </html>

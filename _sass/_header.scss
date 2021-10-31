@@ -1,0 +1,31 @@
+.site-header {
+  background-color: #20133f;
+  color: $color_like_white;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  position: relative;
+  .wrapper {
+    @include desktop {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+.site-branding {
+  a{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    .logo {
+      width: 60px;
+      height: auto;
+      display: inline-block;
+    }
+    .site-title {
+      font-size: 22px;
+      margin-left: 20px;
+    }
+  }
+}

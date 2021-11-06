@@ -37,7 +37,7 @@
 
 // Burger menu
 .menu-link {
-  position: fixed;
+  position: absolute;
   top: 44px;
   right: 20px;
   display: block;
@@ -112,20 +112,14 @@
 // Menu mobile first
 .site-navigation {
   // On affiche le menu que si burger est cliqué
-  .menu-items {
-    display: none;
-  }
+  display: none;
   &.burger-toggled {
-    .menu-items {
-      display: block;
-    }
+    display: block;
   }
 }
 
 @include desktop {
   .site-navigation {
-    .menu-items {
-      display: block;
-    }
+    display: block;
   }
 }

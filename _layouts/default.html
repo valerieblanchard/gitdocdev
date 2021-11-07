@@ -42,19 +42,20 @@ class="page"
 
 			{% if page.layout == 'category' or page.layout == 'post' %}
 			<aside id="secondary" class="sidebar" role="complementary">
-				<h3>Categories</h3>
+				<p class="aside-title">Categories</p>
 				<ul class="nav-cat-list">
 					{% for cat in site.categories %}
 						{% assign cat_name = cat[0] %}
-						{% assign cat_url = cat[0] | append: "/" | prepend: "/" %}
+						{% assign cat_url = cat[0] | prepend: "/" | append: "/" %}
 						{% if page.url == cat_url %}
-							<li><span class="active">{{ cat_name }}</span></li>
+							<li class="active"><span>{{ cat_name }}</span></li>
+						{% elsif page.categories[0] == cat_name %}
+							<li class="active"><a href="{{ site.baseurl }}{{ cat_url }}">{{ cat_name }}</a></li>
 						{% else %}
 							<li><a href="{{ site.baseurl }}{{ cat_url }}">{{ cat_name }}</a></li>
 						{% endif %}
 					{% endfor %}
 				</ul>
-
 			</aside>
 			{% endif %}
 		</div>

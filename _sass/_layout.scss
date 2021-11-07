@@ -51,29 +51,3 @@ section {
 		width: calc(33.33% - 20px);
 	}
 }
-
-body {
-  &.archive-category,
-  &.single-post {
-    .sidebar {
-      background-color:#c5d7e0;
-      padding: 40px 20px;
-    }
-    @include desktop {
-      .site-content {
-        display: flex;
-      }
-      .content-area {
-        flex-basis: 80%;
-      }
-      .sidebar {
-        position: sticky;
-        top: 0;
-        align-self: flex-start; // flex box elements default to stretch, all the elements are the same height, which can't be scrolled againstadding this to the sticky element set the height to auto, which allowed scrolling, and fixed it.
-        order: -1;
-        flex: 1 0;
-      }
-    }
-
-  }
-}

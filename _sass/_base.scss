@@ -118,10 +118,17 @@ big {
 a {
   color: $color_link;
   &:visited {
-    color: darken($color_link, 20%);
+    color: $color_link; //darken($color_link, 20%);
   }
 }
-
+h1, h2, h3, h4, .nav-cat-list {
+  a {
+    text-decoration: none;
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+  }
+}
 #breadcrumbs {
   padding: 10px 0;
   a {

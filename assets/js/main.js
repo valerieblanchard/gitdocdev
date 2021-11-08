@@ -84,7 +84,7 @@
 } )();
 
 /**
- * Sticky header on scroll and resize it
+ * Fixed header on scroll and resize it
  * Back to top
  */
 window.onscroll = function() {scrollFunction()};
@@ -97,15 +97,11 @@ function scrollFunction() {
   if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
     btn.classList.add("show");
   } else if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
-    header.classList.add("sticky");
-    header.style.padding = "15px 0";
-    logo.style.width = "30px";
-    burger.style.top = "18px";
+    header.classList.add("fixed");
+    header.classList.add("thinned");
   } else {
-    header.classList.remove("sticky");
-    header.style.padding = "25px 0";
-    logo.style.width = "60px";
-    burger.style.top = "44px";
+    header.classList.remove("fixed");
+    header.classList.remove("thinned");
     btn.classList.remove('show');
   }
 }

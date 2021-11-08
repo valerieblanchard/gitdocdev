@@ -4,11 +4,6 @@
   padding-top: 25px;
   padding-bottom: 25px;
   position: relative; // for what ?
-  transition: 0.4s; // Adds a transition effect when the padding is decreased on scroll
-  &.sticky {
-    position: sticky;
-    top: 0;
-  }
   .wrapper {
     @include desktop {
       display: flex;
@@ -35,3 +30,25 @@
     }
   }
 }
+
+.site-header {
+  transition: 0.4s; // Adds a transition effect when the padding is decreased on scroll
+  &.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  &.thinned {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    .site-branding {
+      a .logo {
+        width: 30px;
+      }
+    }
+    .menu-link {
+      top: 18px;
+    }
+  }
+}
+

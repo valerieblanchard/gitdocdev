@@ -10,8 +10,11 @@
   }
   ul {
     font-family: "Helvetica", "Arial", "Sans-Serif";
-    padding: 0px;
+    padding: 0;
     list-style: none;
+    @include desktop {
+      margin: 0;
+    }
     li {
       @include desktop {
         display: inline-block;
@@ -42,6 +45,7 @@
   right: 20px;
   display: block;
   padding: 1em;
+  transition: 0.4s; // Adds a transition effect when the top is decreased on scroll
 }
 
 // Apparence du burger menu
@@ -95,7 +99,7 @@
   }
 }
 
-.burger-toggled .menu-bar {
+.menu-link.active .menu-bar {
   background: transparent;
 
   &:before {

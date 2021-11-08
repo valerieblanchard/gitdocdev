@@ -32,15 +32,15 @@ body {
         display: flex;
       }
       .content-area {
-        flex-basis: 80%;
+        margin-left: 20px;
       }
       .sidebar {
         min-width: 240px;
         position: sticky;
-        top: 0;
+        top: 85px;
         align-self: flex-start; // flex box elements default to stretch, all the elements are the same height, which can't be scrolled againstadding this to the sticky element set the height to auto, which allowed scrolling, and fixed it.
         order: -1;
-        flex: 1 0;
+        // flex: 1 0;
         ul {
           li {
             display: block;

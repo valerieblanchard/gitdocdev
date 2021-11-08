@@ -82,3 +82,25 @@
   }
 
 } )();
+
+/**
+ * Sticky header on scroll and resize it
+ */
+window.onscroll = function() {scrollFunction()};
+var header = document.getElementById("header");
+var logo = document.getElementById("logo");
+var burger = document.getElementById("burger-menu");
+
+function scrollFunction() {
+  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+    header.classList.add("sticky");
+    header.style.padding = "15px 0";
+    logo.style.width = "30px";
+    burger.style.top = "18px";
+  } else {
+    header.classList.remove("sticky");
+    header.style.padding = "25px 0";
+    logo.style.width = "60px";
+    burger.style.top = "44px";
+  }
+}

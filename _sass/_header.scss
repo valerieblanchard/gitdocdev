@@ -3,7 +3,12 @@
   color: $color_like_white;
   padding-top: 25px;
   padding-bottom: 25px;
-  position: relative;
+  position: relative; // for what ?
+  transition: 0.4s; // Adds a transition effect when the padding is decreased on scroll
+  &.sticky {
+    position: sticky;
+    top: 0;
+  }
   .wrapper {
     @include desktop {
       display: flex;
@@ -22,6 +27,7 @@
       width: 60px;
       height: auto;
       display: inline-block;
+      transition: 0.4s; // Adds a transition effect when the width is decreased on scroll
     }
     .site-title {
       font-size: 22px;

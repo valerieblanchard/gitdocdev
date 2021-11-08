@@ -6,20 +6,18 @@
 }
 .site-content {
   flex-grow: 1;
+  margin: 25px auto;
 }
-
-.page-content, .wrapper {
-  max-width: 1120px;
+.wrapper {
   margin: 0 auto;
+}
+.site-content, .wrapper {
+  width: 100%;
+  max-width: 1120px;
   padding-left: 20px;
   padding-right: 20px;
 }
-section {
-  padding-top: 25px;
-  padding-bottom: 25px;
-}
 
-// flex-grid
 .vignette-single {
   text-align: center;
   border: 1px solid #e0e0e0;

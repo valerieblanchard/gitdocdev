@@ -85,14 +85,18 @@
 
 /**
  * Sticky header on scroll and resize it
+ * Back to top
  */
 window.onscroll = function() {scrollFunction()};
 var header = document.getElementById("header");
 var logo = document.getElementById("logo");
 var burger = document.getElementById("burger-menu");
+var btn = document.getElementById("backtotop");
 
 function scrollFunction() {
-  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    btn.classList.add("show");
+  } else if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
     header.classList.add("sticky");
     header.style.padding = "15px 0";
     logo.style.width = "30px";
@@ -102,5 +106,12 @@ function scrollFunction() {
     header.style.padding = "25px 0";
     logo.style.width = "60px";
     burger.style.top = "44px";
+    btn.classList.remove('show');
   }
+}
+
+btn.onclick = function() {toTop()};
+function toTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }

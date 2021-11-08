@@ -127,3 +127,27 @@
     display: block;
   }
 }
+
+// Backtotop
+#backtotop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  .svg-icon {
+    width: 29px;
+    height: 33px;
+    transition: 0.2s;
+    // &:hover, &:focus {
+    //   filter: brightness(0) invert(1);
+    // }
+  }
+  @include tablet {
+    &.show {
+      display: block;
+    }
+  }
+}
